@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  min-height: 2rem;
+  float:left;
+  box-sizing: border-box;
+  border-right: 0.1rem solid blue;
+}
+
+#h1, #h2, #h3, #h4 {
+  width: 25%;
+  background: #efefef;
+}
+
+#b1, #b2 {
+  min-height: 10rem;
+}
+#b1 {
+  width: 61.8%;
+  background: #aaefbb;
+}
+#b2 {
+  width: 38.2%;
+  background: #aabbef;
+}
+
+#f1, #f2, #f3 {
+  background: #efefef;
+}
+#f1, #f3 {
+  width: 25%;
+}
+#f2 {
+  width: 50%;
+}

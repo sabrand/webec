@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Storybook for the Web Engineering Module</title>
+
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      body {
+        margin: 0;
+        border: 0;
+        background: linear-gradient(to bottom, #0066cc 0%, #ccffff 100%);
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+      }
+
+      /* general tags definitions */
+      h1, h2, h3, p, address {
+        padding-left: 0.5rem;
+      }
+      h1 {
+        color: black;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        margin-top:0;
+        border-bottom: 0.1rem solid #ccc;
+      }
+      h2{
+        font-size: 1.3rem;
+      }
+      h2::before {
+        content: "# ";
+        color: red;
+      }
+
+      abbr {
+        text-decoration: none;
+      }
+      abbr, dfn {
+        font-style: italic;
+        font-weight: bold;
+        margin: 0.2rem;
+        border-bottom: 0.1rem dashed red;
+      }
+
+      code {
+        font-family: monospace;
+        display: inline-block;
+        background-color: #e6f2ff;
+        padding: 0 0.5rem;
+      }
+      code:hover {
+        background-color: #b3d9ff;
+      }
+
+      /* defining the header -  first element in body */
+      header {
+        font-size: 2.5rem;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+
+
+      /* defining the main  - second element in body */
+      main {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: #efefef;
+        max-width: 70rem;
+        height: inherit;
+      }
+      /* defining the footer - third and last element in body */
+      footer {
+        background-color: #0066cc;
+        border-top: 0.1rem solid #999;
+        width: 100%;
+      }
+      footer address {
+        padding: 1rem 0.3rem;
+        text-align: center;
+        color: white;
+      }
+
+      /* element specific formating */
+
+      #context, #content{
+        padding: 0.7rem;
+      }
+
+      /* overwriting general attribute for header */
+      header dfn {
+        border-bottom-color: white;
+      }
+
+      /* data table definition */
+      table {
+          margin: 0 0.5rem;
+          border-collapse: collapse;
+      }
+      /* hide the caption, it is redundant for the seeing reader */
+      table caption {
+        display: none;
+      }
+      th {
+        text-align: left;
+      }
+      td {
+        padding: 0.3rem 0.3rem 0.3rem 0;
+      }
+
+      tr:hover td {
+         background-color: #b3d9ff;
+      }
+      .holiday td {
+        color: #999;
+        font-style: italic;
+      }
+      .highlight td {
+        font-weight: bold;
+        background-color: red;
+        color: white;
+      }
+      tr.highlight:hover td {
+        background-color: yellow;
+        color: black;
+      }
+      tfoot {
+        font-weight: bold;
+      }
+
+      /* articles populate the content section */
+      article {
+        box-sizing: border-box;
+        float: left;
+        width: 45%;
+        min-width: 20rem;
+        padding: 0.2rem;
+      }
+
+      article p:last-child {
+        font-weight: bold;
+      }
+
+      article:nth-child(3) {
+        float: left;
+        width: 50%;
+        padding: 0.5rem 1rem;
+        border: 0.1rem solid #ccc;
+        background-color: white;
+      }
+
+      article:last-child {
+        padding-left: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      article#criteria {
+        border: 0.2rem dashed red;
+        padding: 0.7rem;
+        background-color: #fff0e6;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <dfn title="Drehbuch">Storybook</dfn> for the Web Engineering Module
+</header>
+<main>
+    <section id="context">
+        <h1>Module delivery mode</h1>
+        <p> This installment of the <dfn title="WebEngineering">webeC</dfn> module is
+            delivered in the spring semester of 2018.
+        </p>
+    </section>
+
+    <section id="content">
+        <h1>Delivery dates and examination details</h1>
+        <article>
+            <h2>Overview</h2>
+            <table>
+                <caption>Delivery dates</caption>
+                <thead>
+                  <tr><th> Date   </th><th>  # </th><th>Topic</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>19.02.18</td><td></td><td>HTML</td></tr>
+                  <tr><td>26.02.18</td><td></td><td>CSS</td></tr>
+                  <tr><td>05.03.18</td><td></td><td>Grails, Web, MVC, Test</td></tr>
+                  <tr><td>12.03.18</td><td></td><td>GSP, Template, Taglib, Layout</td></tr>
+                  <tr><td>19.03.18</td><td></td><td>Javascript</td></tr>
+                  <tr><td>26.03.18</td><td></td><td>Consolidation training</td></tr>
+                  <tr class="holiday"><td>02.04.18</td><td></td><td>Easter Holiday</td></tr>
+                  <tr><td>09.04.18</td><td></td><td>Persistence, DB-Access (GORM)</td></tr>
+                  <tr><td>16.04.18</td><td></td><td>REST, Services</td></tr>
+                  <tr class="holiday"><td>23.04.18</td><td></td><td>Project Week</td></tr>
+                  <tr class="highlight"><td>30.04.18</td><td></td><td>ANWESENHEITSPLICHT! Übungsvorbereitung</td></tr>
+                  <tr><td>07.05.18</td><td></td><td>Übungsanlass</td></tr>
+                  <tr><td>14.05.18</td><td></td><td>Responsive / Mobile Web</td></tr>
+                  <tr class="highlight"><td>28.05.18</td><td></td><td>WICHTIG! Übungsabgabe</td></tr>
+                  <tr><td>04.06.18</td><td></td><td>Deployment</td></tr>
+                  <tr><td>11.06.18</td><td></td><td>Prüfungsvorbereitung</td></tr>
+                </tbody>
+                <tfoot><tr><td colspan="3"> MSP date to be announced</td> </tr></tfoot>
+            </table>
+        </article>
+        <article>
+            <h2> Total Effort</h2>
+            <p> Classroom lectures add up to <code>13 * 3h = 39h</code>.</p>
+            <p> Prework and afterwork, including homework adds up to <code>13 * 2h = 26h</code>.</p>
+            <p> The exercise for the continuous assessment grade takes <code>3 * 5h = 15h</code>.</p>
+            <p> Preparation for the final exam will take approximately <code>8h</code>.</p>
+            <p> Writing the final exam takes <code>2h</code>.</p>
+            <p> This makes a total of <code>90h</code>.</p>
+        </article>
+        <article id="criteria" style="display:hidden;">
+            <h2> Passing criteria </h2>
+            <ul>
+                <li>You have to attend the exercise preparation event.</li>
+                <li>You have to do the exercise and deliver before the deadline.</li>
+                <li>You have to attend the <dfn title="Modulschlussprüfung">final exam (MSP)</dfn>.</li>
+            </ul>
+            <p> Your exercise will determine your <abbr title="Erfahrungsnote">continuous assessment grade (EN)</abbr>. </p>
+            <p> EN and MSP together make your final grade. </p>
+
+        </article>
+    </section>
+</main>
+<footer>
+    <address>Dierk König, 5.2B16, mailto:dierk.koenig@fhnw.ch</address>
+</footer>
+</body>
+</html>
