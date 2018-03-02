@@ -10,14 +10,14 @@
           margin: 0;
           border: 0;
       }
-      /* layout structuring */
+      /* Grid Layout structuring */
       #content {
         display: grid;
-        grid-template: 2rem 1rem 2fr 1rem 1fr 1rem / 1rem 1fr 2rem 1fr 1rem ;
+        grid-template: 3rem 1rem 2fr 1rem 1fr 1rem / 1rem 1fr 2rem 1fr 1rem ;
       }
 
       #content h1 {
-        grid-column: 2 / 6;
+        grid-column: 2 / 5;
       }
       #content article:nth-child(2) {
         grid-column: 2 / 3;
@@ -33,18 +33,15 @@
         grid-row: 5 / 6;
       }
 
-      /* header and footer */
-
+      /* header and footer, some general tags */
       header, footer {
         background-color: #ffff00;
         text-align: center;
       }
-
       header {
         padding: 1rem 0;
         font-size: 3rem;
       }
-
       footer {
         height: 3rem;
       }
@@ -52,7 +49,6 @@
         padding-top: 1rem;
         font-style: normal;
       }
-
       h1 {
         font-size: 2rem;
       }
@@ -60,7 +56,10 @@
         font-size: 1.6rem;
         padding-bottom: 0.6rem;
       }
-
+      dfn, abbr {
+        text-decoration: none;
+        border-bottom: 0.1rem dashed #cc0000;
+      }
       code {
         font-family: monospace;
         font-size: 1.2rem;
@@ -68,48 +67,49 @@
         background-color: #ffffcc;
         padding: 0 0.5rem;
       }
-      article p{
+      article p {
         padding-bottom: 0.6rem;
       }
+
       /* Context styling */
       #context {
         padding: 2rem 0;
       }
-      #context h1{
+      #context h1 {
         padding: 0 1rem;
       }
       #context p {
         padding: 0.4rem 1rem;
       }
-      /*content styling */
-      dfn, abbr {
-        text-decoration: none;
-        border-bottom: 0.1rem dashed #cc0000;
-      }
 
-      .holiday {
+      /* Content styling */
+      #content .holiday {
         color: #ccc;
         font-style: italic;
       }
-      .highlight{
+      #content .highlight{
         background-color: #cc0000;
         color: white;
         font-weight: bold;
       }
-      table {
+      #content h1 {
+        border-bottom: 0.1rem solid #999;
+        padding: 0.5rem 0;
+      }
+      #content table {
         border-collapse:collapse;
       }
-      caption {display: none;}
-      th {text-align: left;}
-      td {padding: 0.2rem 0.3rem;}
-      tr.highlight:hover td {
+      #content caption {display: none;}
+      #content th {text-align: left;}
+      #content td {padding: 0.2rem 0.3rem;}
+      #content tr.highlight:hover td {
         color: black;
         background-color: #ffff00;
       }
-      article {
+      #content article {
         min-width: 17rem;
       }
-      article:last-child {
+      #content article:last-child {
         border: 0.2rem dashed #cc0000;
         padding: 1rem;
       }
